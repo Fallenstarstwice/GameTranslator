@@ -1,0 +1,30 @@
+[
+  {
+    "id": "openai",
+    "name": "OpenAI",
+    "base_url": "https://api.openai.com/v1",
+    "models": [
+      "text-embedding-3-small",
+      "text-embedding-3-large"
+    ],
+    "deletable": false
+  },
+  {
+    "id": "aliyun",
+    "name": "Aliyun (Dashscope)",
+    "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "models": [
+      "text-embedding-v4"
+    ],
+    "deletable": false
+  },
+  {
+    "id": "gemini",
+    "name": "Google Gemini",
+    "base_url": "https://generativelanguage.googleapis.com/v1beta",
+    "models": [
+        "embedding-001"
+    ],
+    "deletable": false
+  }
+]

@@ -1,0 +1,156 @@
+/* General Window Styling */
+QMainWindow, QWidget {
+    background-color: #F0F0F0;
+    color: #2B2B2B;
+    font-family: "Segoe UI", "Helvetica Neue", "Arial", sans-serif;
+    font-size: 10pt;
+}
+
+/* Tab Widget Styling */
+QTabWidget::pane {
+    border: 1px solid #D0D0D0;
+    border-radius: 4px;
+}
+
+QTabBar::tab {
+    background-color: #E0E0E0;
+    color: #2B2B2B;
+    padding: 8px 16px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    border: 1px solid #D0D0D0;
+    border-bottom: none;
+    margin-right: 2px;
+}
+
+QTabBar::tab:selected {
+    background-color: #F0F0F0;
+    border-bottom: 1px solid #F0F0F0;
+}
+
+QTabBar::tab:!selected:hover {
+    background-color: #D5D5D5;
+}
+
+/* Button Styling */
+QPushButton {
+    background-color: #E0E0E0;
+    color: #2B2B2B;
+    border: 1px solid #C0C0C0;
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-align: left; /* Align icon and text to the left */
+}
+
+QPushButton:hover {
+    background-color: #D0D0D0;
+}
+
+QPushButton:pressed {
+    background-color: #C5C5C5;
+}
+
+/* Text Edit Styling */
+QTextEdit, QLineEdit {
+    background-color: #FFFFFF;
+    color: #2B2B2B;
+    border: 1px solid #C0C0C0;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+/* Combobox Styling */
+QComboBox {
+    background-color: #FFFFFF;
+    border: 1px solid #C0C0C0;
+    border-radius: 4px;
+    padding: 5px;
+    min-width: 6em;
+}
+
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 20px;
+    border-left-width: 1px;
+    border-left-color: #C0C0C0;
+    border-left-style: solid;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #FFFFFF;
+    border: 1px solid #C0C0C0;
+    selection-background-color: #D0E8FF;
+}
+
+/* GroupBox Styling */
+QGroupBox {
+    font-weight: bold;
+    border: 1px solid #D0D0D0;
+    border-radius: 4px;
+    margin-top: 10px;
+    padding: 15px; /* Add internal padding */
+}
+
+QGroupBox::title {
+    subcontrol-origin: margin;
+    subcontrol-position: top left;
+    padding: 0 5px;
+    background-color: #F0F0F0;
+}
+
+/* Label Styling */
+QLabel {
+    color: #333333;
+}
+
+/* ScrollArea & ScrollBar Styling */
+QScrollArea {
+    border: none;
+}
+
+QScrollBar:vertical {
+    border: none;
+    background: #F0F0F0;
+    width: 10px;
+    margin: 0px 0px 0px 0px;
+}
+QScrollBar::handle:vertical {
+    background: #C0C0C0;
+    min-height: 20px;
+    border-radius: 5px;
+}
+QScrollBar::handle:vertical:hover {
+    background: #A0A0A0;
+}
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+    height: 0px;
+    background: none;
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+    background: none;
+}
+
+QScrollBar:horizontal {
+    border: none;
+    background: #F0F0F0;
+    height: 10px;
+    margin: 0px 0px 0px 0px;
+}
+QScrollBar::handle:horizontal {
+    background: #C0C0C0;
+    min-width: 20px;
+    border-radius: 5px;
+}
+QScrollBar::handle:horizontal:hover {
+    background: #A0A0A0;
+}
+QScrollBar::add-line:horizontal, QScrollBar::sub-line:horizontal {
+    width: 0px;
+    background: none;
+}
+QScrollBar::add-page:horizontal, QScrollBar::sub-page:horizontal {
+    background: none;
+}

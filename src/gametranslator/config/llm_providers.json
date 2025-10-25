@@ -1,0 +1,41 @@
+[
+  {
+    "id": "openai",
+    "name": "OpenAI",
+    "base_url": "https://api.openai.com/v1",
+    "models": [
+      "gpt-4o",
+      "gpt-4-turbo",
+      "gpt-3.5-turbo"
+    ],
+    "deletable": false
+  },
+  {
+    "id": "groq",
+    "name": "Groq",
+    "base_url": "https://api.groq.com/openai/v1",
+    "models": [
+      "llama3-8b-8192",
+      "llama3-70b-8192",
+      "mixtral-8x7b-32768"
+    ],
+    "deletable": false
+  },
+    {
+    "id": "aliyun",
+    "name": "aliyun",
+    "base_url": "https://dashscope.aliyuncs.com/compatible-mode/v1",
+    "models": [
+      "qwen-plus"
+    ],
+    "deletable": false
+  },
+  {
+    "id": "custom",
+    "name": "自定义...",
+    "base_url": "",
+    "models": [],
+    "deletable": false
+  }
+
+]
