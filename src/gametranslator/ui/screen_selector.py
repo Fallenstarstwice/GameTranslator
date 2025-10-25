@@ -49,8 +49,9 @@ class ScreenSelector(QWidget):
         self.setAttribute(Qt.WidgetAttribute.WA_TranslucentBackground, True)
         self.setAttribute(Qt.WidgetAttribute.WA_NoSystemBackground, True)
         
-        # Set the widget geometry to cover the entire screen of the screenshot
-        self.setGeometry(self.screenshot.rect())
+        # Set the widget geometry to cover the entire screen
+        screen_geometry = QApplication.primaryScreen().geometry()
+        self.setGeometry(screen_geometry)
         
         # Initialize selection state
         self.selection_rect = QRect()
@@ -156,7 +157,14 @@ class ScreenSelector(QWidget):
         if not self.selection_rect.isEmpty():
             # Draw the corresponding part of the original screenshot inside the selection.
             # This makes the selected area appear bright and clear.
-            painter.drawPixmap(self.selection_rect, self.screenshot, self.selection_rect)
+            dpr = self.devicePixelRatio()
+            source_rect = QRect(
+                self.selection_rect.left() * dpr,
+                self.selection_rect.top() * dpr,
+                self.selection_rect.width() * dpr,
+                self.selection_rect.height() * dpr
+            )
+            painter.drawPixmap(self.selection_rect, self.screenshot, source_rect)
 
             # Draw a distinct border around the selection for clarity.
             pen = QPen(QColor(255, 0, 0, 220), 2)  # A solid, bright red

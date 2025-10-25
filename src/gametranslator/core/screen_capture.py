@@ -4,30 +4,31 @@ Screen capture module for GameTranslator.
 
 import cv2
 import numpy as np
-import pyautogui
-from PIL import Image
+from PIL import Image, ImageGrab
 
 
 class ScreenCapture:
     """Handles screen capture functionality."""
-    
+
     @staticmethod
     def capture_screen(region=None):
         """
         Capture the screen or a region of the screen.
-        
+
         Args:
             region (tuple, optional): Region to capture (left, top, width, height).
                                      If None, captures the entire screen.
-        
+
         Returns:
             PIL.Image: The captured image.
         """
         if region:
-            screenshot = pyautogui.screenshot(region=region)
+            left, top, width, height = region
+            bbox = (left, top, left + width, top + height)
+            screenshot = ImageGrab.grab(bbox=bbox, all_screens=True)
         else:
-            screenshot = pyautogui.screenshot()
-        
+            screenshot = ImageGrab.grab(all_screens=True)
+
         return screenshot
     
     @staticmethod
